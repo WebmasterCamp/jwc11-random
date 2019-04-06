@@ -59,7 +59,7 @@ const audio = new Audio(sound)
 window.audio = audio
 
 const playSound = () => {
-  audio.currentTime = 0
+  audio.currentTime = 1
   audio.play()
 }
 
