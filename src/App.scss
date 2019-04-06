@@ -1,18 +1,18 @@
 .App {
   text-align: center;
   position: relative;
+  font-family: 'Pridi', serif;
 }
 
 .bg {
   width: 1438px;
-  height: 707px;
 }
 
 .start {
   width: 100px;
   height: 100px;
   left: 680px;
-  top: 300px;
+  top: 350px;
   position: absolute;
   z-index: 1000;
 }
@@ -20,7 +20,7 @@
   width: 100px;
   height: 100px;
   left: 680px;
-  top: 50px;
+  top: 60px;
   position: absolute;
   z-index: 1000;
   animation-name: to1;
@@ -32,7 +32,7 @@
   position: absolute;
   z-index: 1000;
   left: 920px;
-  top: 190px;
+  top: 220px;
   animation-name: to2;
   animation-duration: 22s;
 }
@@ -42,7 +42,7 @@
   position: absolute;
   z-index: 1000;
   left: 920px;
-  top: 405px;
+  top: 465px;
   animation-name: to3;
   animation-duration: 24s;
 }
@@ -52,7 +52,7 @@
   position: absolute;
   z-index: 1000;
   left: 680px;
-  top: 540px;
+  top: 620px;
   animation-name: to4;
   animation-duration: 24s;
 }
@@ -62,7 +62,7 @@
   position: absolute;
   z-index: 1000;
   left: 440px;
-  top: 405px;
+  top: 470px;
   animation-name: to5;
   animation-duration: 26s;
 }
@@ -72,162 +72,152 @@
   position: absolute;
   z-index: 1000;
   left: 440px;
-  top: 190px;
+  top: 220px;
   animation-name: to6;
   animation-duration: 24s;
-}
-.coin7 {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  z-index: 1000;
-  left: 440px;
-  top: 190px;
-  animation-name: earth;
-  animation-duration: 10s;
 }
 
 /* Standard syntax */
 @keyframes to1 {
 
-  0%   {  left: 680px;  top: 300px;} /*center*/
-  5%   {  left: 920px;  top: 405px;} /*br*/
-  15%  {  left: 440px;  top: 405px;} /*tr*/
-  20%  {  left: 920px;  top: 190px;} /*tl*/
-  25%  {  left: 680px;  top: 540px;} /*bl*/
-  30%  {  left: 680px;  top: 300px;} /*bc*/
-  35%  {  left: 680px;  top: 540px;} /*tc*/
-  40%  {  left: 440px;  top: 405px;} /*center*/
-  45%  {  left: 920px;  top: 405px;} /*br*/
-  50%  {  left: 920px;  top: 190px;} /*tr*/
-  55%  {  left: 440px;  top: 190px;} /*tl*/
-  60%  {  left: 920px;  top: 190px;} /*center*/
-  65%  {  left: 440px;  top: 405px;} /*br*/
-  75%  {  left: 920px;  top: 405px;} /*tr*/
-  70%  {  left: 920px;  top: 405px;} /*tl*/
-  75%  {  left: 440px;  top: 405px;} /*bl*/
-  80%  {  left: 920px;  top: 405px;} /*bc*/
-  85%  {  left: 440px;  top: 190px;} /*tc*/
-  90%  {  left: 680px;  top: 540px; } /*center*/
-  95%  {  left: 680px;  top: 540px;} /*br*/
-  100% {  left: 680px;  top: 50px;} /*tr*/
+  0%   {  left: 680px;  top: 350px;} /*center*/
+  5%   {  left: 920px;  top: 465px;} /*br*/
+  15%  {  left: 440px;  top: 465px;} /*tr*/
+  20%  {  left: 920px;  top: 220px;} /*tl*/
+  25%  {  left: 680px;  top: 620px;} /*bl*/
+  30%  {  left: 680px;  top: 350px;} /*bc*/
+  35%  {  left: 680px;  top: 620px;} /*tc*/
+  40%  {  left: 440px;  top: 465px;} /*center*/
+  45%  {  left: 920px;  top: 465px;} /*br*/
+  50%  {  left: 920px;  top: 220px;} /*tr*/
+  55%  {  left: 440px;  top: 220px;} /*tl*/
+  60%  {  left: 920px;  top: 220px;} /*center*/
+  65%  {  left: 440px;  top: 465px;} /*br*/
+  75%  {  left: 920px;  top: 465px;} /*tr*/
+  70%  {  left: 920px;  top: 465px;} /*tl*/
+  75%  {  left: 440px;  top: 465px;} /*bl*/
+  80%  {  left: 920px;  top: 465px;} /*bc*/
+  85%  {  left: 440px;  top: 220px;} /*tc*/
+  90%  {  left: 680px;  top: 620px; } /*center*/
+  95%  {  left: 680px;  top: 620px;} /*br*/
+  100% {  left: 680px;  top: 60px;} /*tr*/
 }
 @keyframes to2 {
 
-  0%   {  left: 680px;  top: 300px;}
-  5%   {  left: 680px;  top: 50px;}
-  10%  {  left: 440px;  top: 405px;}
-  15%  {  left: 920px;  top: 190px;}
-  20%  {  left: 680px;  top: 50px;}
-  25%  {  left: 440px;  top: 190px;}
-  30%  {  left: 920px;  top: 405px;}
-  35%  {  left: 680px;  top: 50px;}
-  40%  {  left: 440px;  top: 190px;}
-  45%  {  left: 920px;  top: 190px;}
-  50%  {  left: 440px;  top: 405px;}
-  55%  {  left: 680px;  top: 50px;}
-  60%  {  left: 920px;  top: 405px;}
-  65%  {  left: 440px;  top: 405px;}
-  70%  {  left: 440px;  top: 405px;}
-  75%  {  left: 920px;  top: 190px;}
-  80%  {  left: 440px;  top: 405px;}
-  85%  {  left: 680px;  top: 540px;}
-  90%  {  left: 440px;  top: 405px;}
-  95%  {  left: 920px;  top: 190px;}
-  100% {  left: 920px;  top: 190px;}
+  0%   {  left: 680px;  top: 350px;}
+  5%   {  left: 680px;  top: 60px;}
+  10%  {  left: 440px;  top: 465px;}
+  15%  {  left: 920px;  top: 220px;}
+  20%  {  left: 680px;  top: 60px;}
+  25%  {  left: 440px;  top: 220px;}
+  30%  {  left: 920px;  top: 465px;}
+  35%  {  left: 680px;  top: 60px;}
+  40%  {  left: 440px;  top: 220px;}
+  45%  {  left: 920px;  top: 220px;}
+  50%  {  left: 440px;  top: 465px;}
+  55%  {  left: 680px;  top: 60px;}
+  60%  {  left: 920px;  top: 465px;}
+  65%  {  left: 440px;  top: 465px;}
+  70%  {  left: 440px;  top: 465px;}
+  75%  {  left: 920px;  top: 220px;}
+  80%  {  left: 440px;  top: 465px;}
+  85%  {  left: 680px;  top: 620px;}
+  90%  {  left: 440px;  top: 465px;}
+  95%  {  left: 920px;  top: 220px;}
+  100% {  left: 920px;  top: 220px;}
 }
 
 @keyframes to3 {
-0% {  left: 680px;  top: 300px;}
-5% {  left: 440px;  top: 190px;}
-10% {  left: 920px;  top: 190px;}
-15% {  left: 440px;  top: 190px;}
-20% {  left: 680px;  top: 50px;}
-25% {  left: 680px;  top: 540px;}
-30% {  left: 920px;  top: 190px;}
-35% {  left: 680px;  top: 540px;}
-40% {  left: 440px;  top: 190px;}
-45% {  left: 440px;  top: 405px;}
-50% {  left: 680px;  top: 50px;}
-55% {  left: 440px;  top: 405px;}
-60% {  left: 440px;  top: 405px;}
-65% {  left: 920px;  top: 405px;}
-70% {  left: 680px;  top: 50px;}
-75% {  left: 440px;  top: 405px;}
-80% {  left: 680px;  top: 540px;}
-85% {  left: 680px;  top: 540px;}
-90% {  left: 920px;  top: 190px;}
-95% {  left: 440px;  top: 405px;}
-100% {  left: 920px;  top: 405px;}
+0% {  left: 680px;  top: 350px;}
+5% {  left: 440px;  top: 220px;}
+10% {  left: 920px;  top: 220px;}
+15% {  left: 440px;  top: 220px;}
+20% {  left: 680px;  top: 60px;}
+25% {  left: 680px;  top: 620px;}
+30% {  left: 920px;  top: 220px;}
+35% {  left: 680px;  top: 620px;}
+40% {  left: 440px;  top: 220px;}
+45% {  left: 440px;  top: 465px;}
+50% {  left: 680px;  top: 60px;}
+55% {  left: 440px;  top: 465px;}
+60% {  left: 440px;  top: 465px;}
+65% {  left: 920px;  top: 465px;}
+70% {  left: 680px;  top: 60px;}
+75% {  left: 440px;  top: 465px;}
+80% {  left: 680px;  top: 620px;}
+85% {  left: 680px;  top: 620px;}
+90% {  left: 920px;  top: 220px;}
+95% {  left: 440px;  top: 465px;}
+100% {  left: 920px;  top: 465px;}
 }
 @keyframes to4 {
-  0% {  left: 680px;  top: 300px;}
-  5% {  left: 680px;  top: 540px;}
-  10% {  left: 680px;  top: 50px;}
-  15% {  left: 440px;  top: 405px;}
-  20% {  left: 680px;  top: 50px;}
-  25% {  left: 920px;  top: 190px;}
-  30% {  left: 680px;  top: 50px;}
-  35% {  left: 440px;  top: 405px;}
-  40% {  left: 440px;  top: 405px;}
-  45% {  left: 920px;  top: 405px;}
-  50% {  left: 920px;  top: 190px;}
-  55% {  left: 920px;  top: 190px;}
-  60% {  left: 440px;  top: 190px;}
-  65% {  left: 920px;  top: 405px;}
-  70% {  left: 680px;  top: 50px;}
-  75% {  left: 680px;  top: 540px;}
-  80% {  left: 440px;  top: 405px;}
-  85% {  left: 920px;  top: 190px;}
-  90% {  left: 920px;  top: 190px;}
-  95% {  left: 440px;  top: 405px;}
-  100% {  left: 680px;  top: 540px;}
+  0% {  left: 680px;  top: 350px;}
+  5% {  left: 680px;  top: 620px;}
+  10% {  left: 680px;  top: 60px;}
+  15% {  left: 440px;  top: 465px;}
+  20% {  left: 680px;  top: 60px;}
+  25% {  left: 920px;  top: 220px;}
+  30% {  left: 680px;  top: 60px;}
+  35% {  left: 440px;  top: 465px;}
+  40% {  left: 440px;  top: 465px;}
+  45% {  left: 920px;  top: 465px;}
+  50% {  left: 920px;  top: 220px;}
+  55% {  left: 920px;  top: 220px;}
+  60% {  left: 440px;  top: 220px;}
+  65% {  left: 920px;  top: 465px;}
+  70% {  left: 680px;  top: 60px;}
+  75% {  left: 680px;  top: 620px;}
+  80% {  left: 440px;  top: 465px;}
+  85% {  left: 920px;  top: 220px;}
+  90% {  left: 920px;  top: 220px;}
+  95% {  left: 440px;  top: 465px;}
+  100% {  left: 680px;  top: 620px;}
 }
 @keyframes to5 {
-0% {  left: 680px;  top: 300px;}
-5% {  left: 680px;  top: 50px;}
-10% {  left: 680px;  top: 540px;}
-15% {  left: 440px;  top: 190px;}
-20% {  left: 680px;  top: 540px;}
-25% {  left: 920px;  top: 190px;}
-30% {  left: 440px;  top: 405px;}
-35% {  left: 440px;  top: 190px;}
-40% {  left: 440px;  top: 405px;}
-45% {  left: 440px;  top: 190px;}
-50% {  left: 440px;  top: 405px;}
-55% {  left: 920px;  top: 190px;}
-60% {  left: 920px;  top: 190px;}
-65% {  left: 920px;  top: 190px;}
-70% {  left: 680px;  top: 50px;}
-75% {  left: 680px;  top: 540px;}
-80% {  left: 440px;  top: 405px;}
-85% {  left: 920px;  top: 190px;}
-90% {  left: 440px;  top: 190px;}
-95% {  left: 680px;  top: 50px;}
-100% {  left: 440px;  top: 405px;}
+0% {  left: 680px;  top: 350px;}
+5% {  left: 680px;  top: 60px;}
+10% {  left: 680px;  top: 620px;}
+15% {  left: 440px;  top: 220px;}
+20% {  left: 680px;  top: 620px;}
+25% {  left: 920px;  top: 220px;}
+30% {  left: 440px;  top: 465px;}
+35% {  left: 440px;  top: 220px;}
+40% {  left: 440px;  top: 465px;}
+45% {  left: 440px;  top: 220px;}
+50% {  left: 440px;  top: 465px;}
+55% {  left: 920px;  top: 220px;}
+60% {  left: 920px;  top: 220px;}
+65% {  left: 920px;  top: 220px;}
+70% {  left: 680px;  top: 60px;}
+75% {  left: 680px;  top: 620px;}
+80% {  left: 440px;  top: 465px;}
+85% {  left: 920px;  top: 220px;}
+90% {  left: 440px;  top: 220px;}
+95% {  left: 680px;  top: 60px;}
+100% {  left: 440px;  top: 465px;}
 }
 @keyframes to6 {
-  0% {  left: 680px;  top: 300px;}
-  5% {  left: 920px;  top: 190px;}
-  10% {  left: 440px;  top: 190px;}
-  15% {  left: 440px;  top: 405px;}
-  20% {  left: 680px;  top: 540px;}
-  25% {  left: 440px;  top: 405px;}
-  30% {  left: 440px;  top: 190px;}
-  35% {  left: 440px;  top: 405px;}
-  40% {  left: 440px;  top: 190px;}
-  45% {  left: 920px;  top: 190px;}
-  50% {  left: 680px;  top: 540px;}
-  55% {  left: 680px;  top: 50px;}
-  60% {  left: 680px;  top: 540px;}
-  65% {  left: 440px;  top: 405px;}
-  70% {  left: 440px;  top: 190px;}
-  75% {  left: 440px;  top: 405px;}
-  80% {  left: 920px;  top: 405px;}
-  85% {  left: 440px;  top: 190px;}
-  90% {  left: 920px;  top: 405px;}
-  95% {  left: 440px;  top: 405px;}
-  95% {  left: 440px;  top: 190px;}
+  0% {  left: 680px;  top: 350px;}
+  5% {  left: 920px;  top: 220px;}
+  10% {  left: 440px;  top: 220px;}
+  15% {  left: 440px;  top: 465px;}
+  20% {  left: 680px;  top: 620px;}
+  25% {  left: 440px;  top: 465px;}
+  30% {  left: 440px;  top: 220px;}
+  35% {  left: 440px;  top: 465px;}
+  40% {  left: 440px;  top: 220px;}
+  45% {  left: 920px;  top: 220px;}
+  50% {  left: 680px;  top: 620px;}
+  55% {  left: 680px;  top: 60px;}
+  60% {  left: 680px;  top: 620px;}
+  65% {  left: 440px;  top: 465px;}
+  70% {  left: 440px;  top: 220px;}
+  75% {  left: 440px;  top: 465px;}
+  80% {  left: 920px;  top: 465px;}
+  85% {  left: 440px;  top: 220px;}
+  90% {  left: 920px;  top: 465px;}
+  95% {  left: 440px;  top: 465px;}
+  95% {  left: 440px;  top: 220px;}
 }
 @keyframes earth {
   0%{  left: 680px;  top: 300px;}
