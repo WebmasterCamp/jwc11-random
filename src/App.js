@@ -4,6 +4,7 @@ import React, {
   useState
 } from "react"
 import "./App.scss"
+import sound from './Epic Unease.mp3'
 
 const random = (start, end) => {
   return Math.floor(Math.random() * (end - start + 1)) + start;
@@ -54,6 +55,16 @@ const getLocalStorage = key => {
   }
 }
 
+const audio = new Audio(sound)
+window.audio = audio
+
+const playSound = () => {
+  audio.currentTime = 0
+  audio.play()
+}
+
+const pauseSound = () => audio.pause()
+
 const setLocalStorage = (key, value) => {
   const data = JSON.stringify(value)
   localStorage.setItem(key, data)
@@ -73,12 +84,14 @@ const CoinRandom = () => {
       setTimeout(() => {
         setShowTeamLabel(true)
         console.log('wows', timeout)
+        pauseSound()
       }, timeout)
     }
   }
 
   const animateCoin = useCallback(() => {
     setShowTeamLabel(false)
+    if (teams.length !== 0) playSound()
 
     const teamIndex = random(0, teams.length - 1)
     showLabelFor(teamIndex)
