@@ -37,7 +37,7 @@ const duration = {
   6: 24,
 }
 
-const groupName = {
+const groupNames = {
   1: 'ก',
   2: 'ข',
   3: 'ค',
@@ -74,12 +74,17 @@ const allTeams = getLocalStorage('_teams') || [1, 2, 3, 4, 5, 6]
 
 const CoinRandom = () => {
   const [selectedTeam, setSelectedTeam] = useState(0)
+  const [groupName, setGroupName] = useState('')
   const [teams, setTeams]  = useState(allTeams)
   const [showTeamLabel, setShowTeamLabel] = useState(false)
 
   const showLabelFor = (index) => {
     const teamNumber = teams[index]
     if (teamNumber) {
+      setTimeout(() => {
+        setGroupName(groupNames[teamNumber])
+      }, 5000)
+
       const timeout = duration[teamNumber] * 1000
       setTimeout(() => {
         setShowTeamLabel(true)
@@ -107,6 +112,7 @@ const CoinRandom = () => {
   useGlobal('animateCoin', animateCoin)
 
   useKeyboardEvent('Space', animateCoin)
+  useKeyboardEvent('KeyS', animateCoin)
 
   return (
     <div id="App">
@@ -116,7 +122,7 @@ const CoinRandom = () => {
         className={`coin${selectedTeam} start`}
       />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
-        สำนัก {groupName[selectedTeam] || 'ฮ'} ถูกเลือก
+        สำนัก {groupName || 'ฮ'} ถูกเลือก
       </div>
 
       <img className="bg" src="./RANDOM.png" alt="" />
