@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react'
 import './App.scss'
 import sound from './Epic Unease.mp3'
+import thunderEffect from './thunder-effect.mp3'
 
 const random = (start, end) => {
   return Math.floor(Math.random() * (end - start + 1)) + start
@@ -54,6 +55,15 @@ const getLocalStorage = key => {
 const audio = new Audio(sound)
 window.audio = audio
 
+const thunderAudio = new Audio(thunderEffect)
+
+const playEffect = () => {
+  thunderAudio.currentTime = 0
+  thunderAudio.play()
+}
+
+// const pauseEffect = () => thunderAudio.pause()
+
 const playSound = () => {
   audio.currentTime = 1
   audio.play()
@@ -85,6 +95,7 @@ const CoinRandom = () => {
       setTimeout(() => {
         setShowTeamLabel(true)
         pauseSound()
+        playEffect()
       }, timeout)
     }
   }
