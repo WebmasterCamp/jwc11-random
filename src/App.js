@@ -26,12 +26,12 @@ const useGlobal = (name, callback) => {
 }
 
 const duration = {
-  1: 32,
-  2: 32,
+  1: 24,
+  2: 28,
   3: 32,
-  4: 32,
-  5: 32,
-  6: 32
+  4: 20,
+  5: 30,
+  6: 29
 }
 
 const groupNames = {
@@ -119,6 +119,7 @@ const CoinRandom = () => {
       showLabelFor(teamIndex)
     }
     setSelectedTeam(teams[teamIndex])
+    setSelectedTeam(teams[teamIndex])
 
     teams.splice(teamIndex, 1)
     setLocalStorage('_teams', teams)
@@ -136,7 +137,9 @@ const CoinRandom = () => {
     <div id="App">
       <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} style={isLastTeam ? { animationDuration: `${lastTimeDurationAnimate}s` } : {}} />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
-        <span className="background-board">สำนัก {groupName || 'ฮ'} ถูกเลือก</span>
+        <span className="background-board">
+          สำนัก {groupName || 'ฮ'} ถูกเลือก
+        </span>
       </div>
 
       <img className="bg" src="./RANDOM.png" alt="" />
