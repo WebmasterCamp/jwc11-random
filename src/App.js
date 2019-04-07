@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react'
 import './App.scss'
 import sound from './Epic Unease.mp3'
-import paperBoard from './paper_board.png'
 
 const random = (start, end) => {
   return Math.floor(Math.random() * (end - start + 1)) + start
