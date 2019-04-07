@@ -1,13 +1,9 @@
-import React, {
-  useCallback,
-  useEffect,
-  useState
-} from "react"
-import "./App.scss"
+import React, {useCallback, useEffect, useState} from 'react'
+import './App.scss'
 import sound from './Epic Unease.mp3'
 
 const random = (start, end) => {
-  return Math.floor(Math.random() * (end - start + 1)) + start;
+  return Math.floor(Math.random() * (end - start + 1)) + start
 }
 
 function useKeyboardEvent(code, callback) {
@@ -29,12 +25,12 @@ const useGlobal = (name, callback) => {
 }
 
 const duration = {
-  1: 20,
-  2: 22,
-  3: 24,
-  4: 24,
-  5: 26,
-  6: 24,
+  1: 32,
+  2: 32,
+  3: 32,
+  4: 32,
+  5: 32,
+  6: 32
 }
 
 const groupNames = {
@@ -43,7 +39,7 @@ const groupNames = {
   3: 'ค',
   4: 'ง',
   5: 'จ',
-  6: 'ฉ',
+  6: 'ฉ'
 }
 
 const getLocalStorage = key => {
@@ -75,10 +71,10 @@ const allTeams = getLocalStorage('_teams') || [1, 2, 3, 4, 5, 6]
 const CoinRandom = () => {
   const [selectedTeam, setSelectedTeam] = useState(0)
   const [groupName, setGroupName] = useState('')
-  const [teams, setTeams]  = useState(allTeams)
+  const [teams, setTeams] = useState(allTeams)
   const [showTeamLabel, setShowTeamLabel] = useState(false)
 
-  const showLabelFor = (index) => {
+  const showLabelFor = index => {
     const teamNumber = teams[index]
     if (teamNumber) {
       setTimeout(() => {
@@ -116,11 +112,7 @@ const CoinRandom = () => {
 
   return (
     <div id="App">
-      <img
-        src="./coin.png"
-        alt=""
-        className={`coin${selectedTeam} start`}
-      />
+      <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
         สำนัก {groupName || 'ฮ'} ถูกเลือก
       </div>
