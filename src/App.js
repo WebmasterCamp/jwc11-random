@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react'
 import './App.scss'
 import sound from './Epic Unease.mp3'
+import paperBoard from './paper_board.png'
 
 const random = (start, end) => {
   return Math.floor(Math.random() * (end - start + 1)) + start
@@ -84,7 +85,6 @@ const CoinRandom = () => {
       const timeout = duration[teamNumber] * 1000
       setTimeout(() => {
         setShowTeamLabel(true)
-        console.log('wows', timeout)
         pauseSound()
       }, timeout)
     }
@@ -114,7 +114,7 @@ const CoinRandom = () => {
     <div id="App">
       <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
-        สำนัก {groupName || 'ฮ'} ถูกเลือก
+        <span className="background-board">สำนัก {groupName || 'ฮ'} ถูกเลือก</span>
       </div>
 
       <img className="bg" src="./RANDOM.png" alt="" />
