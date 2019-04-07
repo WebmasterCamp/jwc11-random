@@ -56,9 +56,10 @@ const audio = new Audio(sound)
 window.audio = audio
 
 const thunderAudio = new Audio(thunderEffect)
+window.thunderAudio = thunderAudio
 
 const playEffect = () => {
-  thunderAudio.currentTime = 0
+  thunderAudio.currentTime = 0.5
   thunderAudio.play()
 }
 
