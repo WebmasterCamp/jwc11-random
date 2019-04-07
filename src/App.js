@@ -79,39 +79,50 @@ const setLocalStorage = (key, value) => {
 
 const allTeams = getLocalStorage('_teams') || [1, 2, 3, 4, 5, 6]
 
+const lastTimeDurationAnimate = 15
+
 const CoinRandom = () => {
   const [selectedTeam, setSelectedTeam] = useState(0)
   const [groupName, setGroupName] = useState('')
   const [teams, setTeams] = useState(allTeams)
   const [showTeamLabel, setShowTeamLabel] = useState(false)
+  const [isLastTeam, setIsLastTeam] = useState(false)
 
-  const showLabelFor = index => {
+  const showLabelFor = useCallback((index, fixedTime) => {
     const teamNumber = teams[index]
     if (teamNumber) {
       setTimeout(() => {
         setGroupName(groupNames[teamNumber])
       }, 5000)
 
-      const timeout = duration[teamNumber] * 1000
+      let timeout = fixedTime ? fixedTime : duration[teamNumber] * 1000
+      console.log(fixedTime)
+      console.log(timeout)
       setTimeout(() => {
         setShowTeamLabel(true)
         pauseSound()
         playEffect()
       }, timeout)
     }
-  }
+  })
 
   const animateCoin = useCallback(() => {
     setShowTeamLabel(false)
     if (teams.length !== 0) playSound()
 
     const teamIndex = random(0, teams.length - 1)
-    showLabelFor(teamIndex)
+    console.log('length', teams.length)
+    if (teams.length === 1) {
+      setIsLastTeam(true)
+      showLabelFor(teamIndex, lastTimeDurationAnimate * 1000)
+    } else {
+      showLabelFor(teamIndex)
+    }
     setSelectedTeam(teams[teamIndex])
 
     teams.splice(teamIndex, 1)
     setLocalStorage('_teams', teams)
-  }, [teams])
+  }, [teams, isLastTeam])
 
   useGlobal('setTeams', setTeams)
   useGlobal('teams', teams)
@@ -123,7 +134,7 @@ const CoinRandom = () => {
 
   return (
     <div id="App">
-      <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} />
+      <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} style={isLastTeam ? { animationDuration: `${lastTimeDurationAnimate}s` } : {}} />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
         <span className="background-board">สำนัก {groupName || 'ฮ'} ถูกเลือก</span>
       </div>
