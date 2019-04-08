@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react'
 import './App.scss'
 import sound from './Epic Unease.mp3'
 import thunderEffect from './thunder-effect.mp3'
+import caster from './caster.gif'
 
 const random = (start, end) => {
   return Math.floor(Math.random() * (end - start + 1)) + start
@@ -137,6 +138,7 @@ const CoinRandom = () => {
       transformOrigin: 'top left'
     }}>
       <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} style={isLastTeam ? { animationDuration: `${lastTimeDurationAnimate}s` } : {}} />
+      <img src={caster} className="caster" alt="" />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
         <span className="background-board">
           สำนัก {groupName || 'ฮ'} ถูกเลือก
