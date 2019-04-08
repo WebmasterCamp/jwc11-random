@@ -1,8 +1,14 @@
-import React, {useCallback, useEffect, useState} from 'react'
+import React, {
+  useCallback,
+  useEffect,
+  useState,
+  useRef
+} from 'react'
 import './App.scss'
 import sound from './Epic Unease.mp3'
 import thunderEffect from './thunder-effect.mp3'
 import caster from './caster.gif'
+import fire from './fire.mp4'
 
 const random = (start, end) => {
   return Math.floor(Math.random() * (end - start + 1)) + start
@@ -88,6 +94,14 @@ const CoinRandom = () => {
   const [teams, setTeams] = useState(allTeams)
   const [showTeamLabel, setShowTeamLabel] = useState(false)
   const [isLastTeam, setIsLastTeam] = useState(false)
+  const videoFire = useRef(null)
+
+  const playVideoFire = useCallback(() => {
+    if (videoFire) {
+      videoFire.current.currentTime = 0.25
+      videoFire.current.play()
+    }
+  }, [videoFire])
 
   const showLabelFor = useCallback((index, fixedTime) => {
     const teamNumber = teams[index]
@@ -101,6 +115,7 @@ const CoinRandom = () => {
         setShowTeamLabel(true)
         pauseSound()
         playEffect()
+        playVideoFire()
       }, timeout)
     }
   })
@@ -140,6 +155,10 @@ const CoinRandom = () => {
       <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} style={isLastTeam ? { animationDuration: `${lastTimeDurationAnimate}s` } : {}} />
       <img src={caster} className="caster" alt="" />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
+        <video width="1920" id="fire" autoPlay loop ref={videoFire} muted>
+          <source src={fire} type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
         <span className="background-board">
           สำนัก {groupName || 'ฮ'} ถูกเลือก
         </span>
