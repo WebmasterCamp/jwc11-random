@@ -96,8 +96,6 @@ const CoinRandom = () => {
       }, 5000)
 
       let timeout = fixedTime ? fixedTime : duration[teamNumber] * 1000
-      console.log(fixedTime)
-      console.log(timeout)
       setTimeout(() => {
         setShowTeamLabel(true)
         pauseSound()
@@ -134,7 +132,10 @@ const CoinRandom = () => {
   useKeyboardEvent('KeyS', animateCoin)
 
   return (
-    <div id="App">
+    <div id="App" style={{
+      transform: 'scale(1.4)',
+      transformOrigin: 'top left'
+    }}>
       <img src="./coin.png" alt="" className={`coin${selectedTeam} start`} style={isLastTeam ? { animationDuration: `${lastTimeDurationAnimate}s` } : {}} />
       <div className={`show-team ${showTeamLabel && 'show'}`}>
         <span className="background-board">
